@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css" />
+
+</head>
+<body>
+  <h1>資料更新</h1>
+  <form action="/students/edit/<%= data.id %>?_method=PUT"method="POST">
+    <!-- 從 inster 那邊改 -->
+    <label for="id">ID</label>
+    <input for="number" id="id" name="id" value="<%= data.id %>"  />
+    <br/>
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name" value="<%= data.name %>" />
+    <br/>
+    <label for="age">Age</label>
+    <input for="number" id="age" name="age" value="<%= data.age %>" />
+    <br/>
+    <label for="merit">Merit</label>
+    <input type="number" id="merit" name="merit" value="<%= data.scholarship.merit %>" />
+    <br/>
+    <label for="other">other</label>
+    <input type="number" id="other" name="other" value="<%= data.scholarship.other %>" />
+    <br />
+    <button>update</button>
+  </form>
+</body>
+</html>
